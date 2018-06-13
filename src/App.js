@@ -34,15 +34,11 @@ export default class App extends Component {
       case 'people':
         content = <People />;
         break;
-
-      default:
-        content = <Homepage />;
-        break;
     }
 
     return (
       <ErrorBoundary>
-        <Segment>
+        <Segment className="header">
           <Menu>
             <Menu.Item
               name="home"
@@ -70,7 +66,7 @@ export default class App extends Component {
           </Menu>
         </Segment>
 
-        <Segment>
+        <Segment className="content">
           {content}
         </Segment>
       </ErrorBoundary>

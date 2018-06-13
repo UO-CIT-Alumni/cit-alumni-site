@@ -1,0 +1,20 @@
+body {
+  background: black;
+}
+
+.ui.segment.header {
+  background: #e3dc68;
+
+}
+
+.ui.segment.content {
+  background: white;
+}
+
+.ui.menu {
+  background: #D3D3D3;
+}
+
+.ui.grid {
+  background: #5b5b5b;
+}
