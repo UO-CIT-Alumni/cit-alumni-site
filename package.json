@@ -1,6 +1,5 @@
 {
   "name": "cit-alumni-site",
-  "proxy": "http://localhost:4010",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
