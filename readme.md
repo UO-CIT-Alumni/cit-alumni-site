@@ -12,7 +12,28 @@ You should have yarn, an npm wrapper: `$ npm i -g yarn`.
 
 In the project directory, run `$ yarn install`.
 
-### Database connection file
+### Start database
+Install MySQL: https://dev.mysql.com/doc/mysql-getting-started/en/
+
+Check the status to make sure it's running, if not then `start` it:
+
+`$ sudo service mysql [start | stop | restart | status]`
+
+#### Set up database
+From root of project:
+
+`$ mysql -u root -p < "db-model/setup-db.sql"`
+
+#### Create citadmin user
+`$ mysql -u root -p`
+
+`mysql> CREATE USER 'citadmin'@'localhost' IDENTIFIED BY '<password>';`
+
+`mysql> GRANT ALL PRIVILEGES ON *.* TO 'citadmin'@'localhost';`
+
+`mysql> FLUSH PRIVILEGES;`
+
+#### Database connection file
 Create a file `secret/db.js` that looks like:
 
 ```
@@ -23,22 +44,6 @@ exports = {
   database: 'citalum'
 };
 ```
-
-### Start database
-Install MySQL: https://dev.mysql.com/doc/mysql-getting-started/en/
-
-Check the status to make sure it's running, if not start it:
-
-`$ sudo service mysql [start | stop | restart | status]`
-
-#### Create citadmin user
-`$ mysql -u root -p`
-
-`mysql> CREATE USER 'citadmin'@'localhost' IDENTIFIED BY '<password>';`
-
-`mysql> GRANT ALL PRIVILEGES ON *.* TO 'citadmin'@'localhost';`
-
-`mysql> FLUSH PRIVILEGES;`
 
 ### Start server
 
