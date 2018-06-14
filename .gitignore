@@ -192,4 +192,4 @@ yarn-error.log*
 
 secret/
 
-.bak
+*.bak
