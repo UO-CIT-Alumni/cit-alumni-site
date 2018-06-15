@@ -12,7 +12,7 @@ export default class Newsfeed extends React.Component {
   }
 
   async getPosts() {
-    const response = await fetch('/api/posts');
+    const response = await fetch('/api/posts', { mode: 'cors' });
     const body = await response.json();
     if (response.status !== 200) throw Error(body.message);
     return body;
