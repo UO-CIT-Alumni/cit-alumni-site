@@ -37,7 +37,7 @@ From root of project:
 Create a file `secret/db.js` that looks like:
 
 ```
-exports = {
+module.exports = {
   host: 'localhost',
   user: 'citadmin',
   password: '<password>',
