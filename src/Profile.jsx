@@ -80,6 +80,7 @@ export default class Profile extends React.Component {
     			<Form.Input fluid label='First Name' value={this.state.firstName} onChange={this.firstOnChange.bind(this)} />
     			<Form.Input fluid label='Last Name' value={this.state.lastName} onChange={this.lastOnChange.bind(this)} />
     			<Form.Select fluid label='Gender' options={options} placeholder='Gender' />
+          <Form.Select fluid label='Major' placeholder='Major' />
     		</Form.Group>
     		<Form.TextArea label='Information' width={10} value={this.state.info} onChange={this.infoOnChange.bind(this)} />
     		<Form.Button content='Submit' />
