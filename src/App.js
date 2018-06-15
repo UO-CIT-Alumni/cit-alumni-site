@@ -6,6 +6,7 @@ import Newsfeed from './Newsfeed.jsx';
 import People from './People.jsx';
 import ErrorBoundary from './ErrorBoundary.jsx';
 import Profile from './Profile.jsx'
+import Terms from './Terms.jsx'
 
 export default class App extends Component {
   constructor(props) {
@@ -33,8 +34,13 @@ export default class App extends Component {
       case 'people':
         content = <People />;
         break;
+
       case 'profile':
         content = <Profile />;
+        break;
+
+      case 'terms':
+        content = <Terms />;
         break;
     }
 
@@ -72,6 +78,14 @@ export default class App extends Component {
               active={this.state.activeItem === 'profile'}
               onClick={this.handleMenuItemClick.bind(this)}
               >Profile
+            </Menu.Item>
+
+            <Menu.Item
+              name="terms"
+              active={true}
+              active={this.state.activeItem === 'terms'}
+              onClick={this.handleMenuItemClick.bind(this)}
+              >Terms
             </Menu.Item>
           </Menu>
         </Segment>

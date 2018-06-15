@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Header, Segment, Form, Input } from 'semantic-ui-react';
 
 const options = [
@@ -6,15 +6,7 @@ const options = [
 	{key: 'f', text: 'Female', value: 'female'}
 ]
 
-/*
-        <strong>onChange:</strong>
-        <pre>{JSON.stringify({ this.state.userId, this.state.firstName, this.state.lastName, this.state.gender, this.state.info }, null, 5)}</pre>
-        <strong>onSubmit:</strong>
-        <pre>{JSON.stringify({ this.state.svUserId, this.state.svFName, this.state.svLName, this.state.svGender, this.state.svInfo  }, null, 5)}</pre>
-
-*/
-
-export default class Profile extends React.Component {
+export default class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {
